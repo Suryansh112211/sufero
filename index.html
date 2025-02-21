@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sufero (SFO) - The Future of Decentralized Finance</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 20px;
+            animation: fadeIn 2s;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f39c12;
+            transform: scale(1.1);
+        }
+        section {
+            padding: 50px 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.5s forwards;
+        }
+        .animated {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        footer {
+            background-color: #1e1e1e;
+            padding: 10px;
+            margin-top: 20px;
+            animation: fadeIn 2s;
+        }
+        img.logo {
+            width: 250px;
+            height: auto;
+            margin: 20px 0;
+            animation: zoomIn 1.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="sufero-high-resolution-logo.png" alt="Sufero Logo" class="logo">
+        <h1>Sufero (SFO)</h1>
+        <p>The Future of Decentralized Finance & Innovation</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#roadmap">Roadmap</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section id="about">
+        <h2>About Sufero</h2>
+        <p>Sufero (SFO) is a next-generation cryptocurrency designed to revolutionize digital finance through speed, security, and real-world usability.</p>
+    </section>
+    
+    <section id="features">
+        <h2>Key Features</h2>
+        <ul>
+            <li>Ultra-fast transactions with minimal fees</li>
+            <li>Decentralized & secure blockchain infrastructure</li>
+            <li>Real-world integration with DeFi and smart contracts</li>
+            <li>Community-driven governance</li>
+        </ul>
+    </section>
+    
+    <section id="roadmap">
+        <h2>Roadmap</h2>
+        <p>Track the progress of Sufero's development and future innovations.</p>
+        <ul>
+            <li>Phase 1: Development & Token Launch</li>
+            <li>Phase 2: Exchange Listings & Strategic Partnerships</li>
+            <li>Phase 3: DeFi Integrations & NFT Marketplace</li>
+            <li>Phase 4: Global Adoption & Enterprise Integration</li>
+        </ul>
+    </section>
+    
+    <section id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with us on social media and stay updated.</p>
+        <ul>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Discord</a></li>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: support@sufero.com</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Sufero. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let sections = document.querySelectorAll("section");
+            let options = { threshold: 0.2 };
+            let observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animated");
+                    }
+                });
+            }, options);
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+</html>
